@@ -1,20 +1,20 @@
 ラズパイ見守りカメラ（1号）
 ===
 
-## 用意したもの
+## ◯ 用意したもの
 
 * Raspberry Pi 4
 * microSDカード 32GB
 * Raspberry Pi Camera B01
 
 
-## インストール
+## ◯ インストール
 
 * Raspberry Pi OS Lite
 * ustreamer
 
 
-## カメラの撮影テスト
+## ◯ カメラの撮影テスト
 
 ```
 libcamera-hello
@@ -31,7 +31,7 @@ kill -9 12345
 ```
 
 
-## ustreamer
+## ◯ ustreamer
 
 ### Install
 
@@ -57,7 +57,7 @@ $ ./ustreamer --device=/dev/video0 --host=0.0.0.0 --port=8080
 * /stream をクリック
 
 
-## 実際に使用したコマンド
+## ◯ 実際に使用したコマンド
 
 ```
 sudo ssh pi@raspberrypi.local // (例)
@@ -89,7 +89,7 @@ kill <ID>
 ```
 
 
-## Raspberry Pi の電源を入れたときに自動的に ustreamer を起動させる方法
+## ◯ Raspberry Pi の電源を入れたときに自動的に ustreamer を起動させる方法
 
 ### systemdサービスとして登録する
 * systemdは現代のLinuxで標準的な起動管理システムで、再起動や自動起動に強い。
@@ -131,7 +131,7 @@ sudo systemctl status ustreamer.service
 ```
 
 
-## 補足: 他の選択肢
+## ◯ 補足: 他の選択肢
 
 ### Raspberry Pi OS + Motion
 * 自由度高め
@@ -164,13 +164,13 @@ sudo systemctl start motion
 	* メールやLINE通知も可能（モーション検出時）
 
 
-## 補足: 拡張案
+## ◯ 補足: 拡張案
 
 * 顔認識（OpenCV + Python）
 * Webアプリ連携（Flask + HTML）
 
 
-## 補足: 上手くいかなかったこと
+## ◯ 補足: 上手くいかなかったこと
 
 * MotionEyeOS
 	* Raspberry Pi 4 ではエラーになって起動してくれなかった
@@ -181,7 +181,7 @@ sudo systemctl start motion
 	* 仮想環境を使う方法があるみたいだけど、今回はパス。
 
 
-## 補足: Bullseye以降のOS
+## ◯ 補足: Bullseye以降のOS
 
 * 設定が変わっているもの多数
 * 検索した情報が古いことが多いので注意
